@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세종YWCA | 제2회 찬양페스타</title>
+  <style>
+    /* 기본 리셋 및 폰트 설정 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* 스마트폰 화면(최대 480px) 모바일 최적화 컨테이너 */
+    .container {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      background-color: #ffffff;
+      padding: 40px 20px 40px;
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    /* 프로필 이미지(로고) 영역 - 파란색 배경 */
+    .profile-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: #005eb8;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0 auto 20px;
+      line-height: 1.3;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    /* 제목 및 소개글 */
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #222;
+      margin: 0 0 8px 0;
+    }
+    .description {
+      font-size: 15px;
+      color: #666;
+      margin: 0 0 30px 0;
+      line-height: 1.5;
+    }
+
+    /* 섹션 구분 타이틀 */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #999;
+      text-align: left;
+      margin: 25px 0 15px 5px;
+      letter-spacing: -0.5px;
+    }
+
+    /* === 공식 채널 아이콘 한 줄 배치 === */
+    .channel-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      max-width: 320px;
+      margin: 0 auto 30px auto;
+    }
+    .channel-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 8px;
+      width: 80px;
+    }
+    .circle-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .channel-item:hover .circle-btn, 
+    .channel-item:active .circle-btn {
+      transform: scale(0.95);
+    }
+    
+    /* 각 아이콘 개별 스타일 */
+    .circle-btn.youtube {
+      background-color: #ff0000;
+    }
+    .circle-btn.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    .circle-btn.chanyang {
+      background-color: #005eb8;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    
+    /* 아이콘 밑 텍스트 */
+    .channel-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #444;
+      white-space: nowrap;
+    }
+
+    /* 링크 버튼 스타일 (유튜브 영상용) */
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    /* 유튜브 전용 버튼 스타일 */
+    .youtube-btn {
+      background-color: #fff0f0;
+      border: 1px solid #ffd6d6;
+      color: #d32f2f;
+    }
+    .youtube-btn:active, .youtube-btn:hover {
+      background-color: #d32f2f;
+      color: #ffffff;
+      border-color: #d32f2f;
+    }
+
+    /* 하단 계좌 안내 박스 (전체 글씨 두껍게 적용) */
+    .account-box {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 15px;
+      color: #000; /* 더 뚜렷한 색상 */
+      letter-spacing: -0.3px;
+      font-weight: 800; /* 전체 글씨 두껍게 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 상단 프로필/소개 영역 -->
+    <div class="profile-img">
+      (사)세종<br>YWCA
+    </div>
+    <h1 class="title">제2회 찬양페스타</h1>
+    <p class="description">
+      말씀과 찬양으로 회복을 경험하는<br>
+      은혜의 자리로 여러분을 초대합니다.
+    </p>
+
+    <!-- 공식 채널 링크 섹션 -->
+    <div class="section-title">공식 채널 및 계정 소개</div>
+    <div class="channel-row">
+      <!-- 1. 세종YWCA 유튜브 -->
+      <a href="https://youtube.com/@sj_ywca1948?si=6uYjFoO21MyrODC2" target="_blank" class="channel-item">
+        <div class="circle-btn youtube">
+          <!-- 유튜브 SVG 아이콘 -->
+          <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.996,15.005l0-6.01L15.224,12L9.996,15.005z"/>
+          </svg>
+        </div>
+        <span class="channel-text">세종Y 유튜브</span>
+      </a>
+
+      <!-- 2. 세종YWCA 인스타그램 -->
+      <a href="https://www.instagram.com/sj_ywca_official/" target="_blank" class="channel-item">
+        <div class="circle-btn instagram">
+          <!-- 인스타그램 SVG 아이콘 -->
+          <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M12,2.163c3.204,0,3.584,0.012,4.85,0.07c3.252,0.148,4.771,1.691,4.919,4.919c0.058,1.265,0.069,1.645,0.069,4.849 c0,3.205-0.012,3.584-0.069,4.849c-0.149,3.225-1.664,4.771-4.919,4.919c-1.266,0.058-1.644,0.07-4.85,0.07 s-3.584-0.012-4.849-0.07c-3.26-0.149-4.771-1.699-4.919-4.92c-0.058-1.265-0.07-1.644-0.07-4.849c0-3.204,0.012-3.584,0.07-4.849 c0.149-3.227,1.664-4.771,4.919-4.919C8.416,2.175,8.796,2.163,12,2.163 M12,0C8.741,0,8.333,0.014,7.053,0.072 C2.695,0.272,0.272,2.69,0.073,7.053C0.014,8.333,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.2,4.358,2.618,6.781,6.98,6.979 C8.333,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072c4.354-0.2,6.782-2.618,6.979-6.98C23.986,15.668,24,15.259,24,12 c0-3.259-0.014-3.668-0.072-4.948c-0.2-4.354-2.623-6.782-6.979-6.979C15.668,0.014,15.259,0,12,0L12,0z M12,5.838 c-3.403,0-6.162,2.759-6.162,6.162c0,3.404,2.759,6.162,6.162,6.162c3.404,0,6.162-2.758,6.162-6.162 C18.162,8.597,15.404,5.838,12,5.838L12,5.838z M12,16.002c-2.209,0-4-1.79-4-4s1.791-4,4-4s4,1.79,4,4S14.209,16.002,12,16.002 L12,16.002z M18.406,4.155c-0.792,0-1.436,0.644-1.436,1.436c0,0.793,0.644,1.437,1.436,1.437c0.793,0,1.437-0.644,1.437-1.437 C19.843,4.799,19.199,4.155,18.406,4.155L18.406,4.155z"/>
+          </svg>
+        </div>
+        <span class="channel-text">세종Y 인스타</span>
+      </a>
+
+      <!-- 3. 찬양페스타 인스타그램 (텍스트 다시 추가) -->
+      <a href="https://www.instagram.com/chanyangfesta/" target="_blank" class="channel-item">
+        <div class="circle-btn chanyang">
+          찬양
+        </div>
+        <span class="channel-text">찬양페스타</span>
+      </a>
+    </div>
+
+    <!-- 유튜브 홍보 영상 섹션 -->
+    <div class="section-title">찬양페스타 홍보 영상</div>
+    <!-- 1. 소개 영상 -->
+    <a href="https://youtu.be/ms6PfbafQXk" target="_blank" class="link-btn youtube-btn">
+      ▶️ 찬양페스타 소개
+    </a>
+    <!-- 2. 의장님 영상 -->
+    <a href="https://youtu.be/cZRX1XLyzg0" target="_blank" class="link-btn youtube-btn">
+      ▶️ 현승원 의장님 홍보 인사
+    </a>
+    <!-- 3. 양왕열 퀄텟 영상 -->
+    <a href="https://youtu.be/v6FdMzuUKiE" target="_blank" class="link-btn youtube-btn">
+      ▶️ 양왕열 퀄텟 홍보 인사
+    </a>
+
+    <!-- 맨 하단 계좌 안내 섹션 -->
+    <div class="section-title">후원 계좌 안내</div>
+    <!-- 계좌번호 전체 굵게 처리 -->
+    <div class="account-box">
+      신협 131-021-625003 (사)세종YWCA
+    </div>
+  </div>
+
+</body>
+</html>
