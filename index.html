@@ -56,8 +56,23 @@
     .description {
       font-size: 15px;
       color: #666;
-      margin: 0 0 30px 0;
+      margin: 0 0 15px 0; /* 간격 조절 */
       line-height: 1.5;
+    }
+
+    /* 행사 정보 박스 (초록색 테마 적용) */
+    .event-info {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 0 0 30px 0;
+      text-align: left;
+      font-size: 14px;
+      color: #166534;
+      line-height: 1.6;
+      letter-spacing: -0.3px;
+      box-sizing: border-box;
     }
 
     /* 섹션 구분 타이틀 */
@@ -179,6 +194,15 @@
       은혜의 자리로 여러분을 초대합니다.
     </p>
 
+    <!-- 추가된 행사 상세 정보 영역 -->
+    <div class="event-info">
+      - 일시 : 2026. 08. 27(목) 오후 7시<br>
+      - 장소 : 세종꿈의교회(세종 노을3로 70)<br>
+      - 게스트 : 현승원 전도사, 양왕열 재즈밴드<br>
+      - 사전행사(당일 오후 6시 - 6시 50분)<br>
+      &nbsp;&nbsp;: 룰렛 돌리기, 홍보부스, 셔플댄스 등
+    </div>
+
     <!-- 공식 채널 링크 섹션 -->
     <div class="section-title">공식 채널 및 계정 소개</div>
     <div class="channel-row">
@@ -216,7 +240,7 @@
     <!-- 유튜브 홍보 영상 섹션 -->
     <div class="section-title">찬양페스타 홍보 영상</div>
     <!-- 1. 소개 영상 -->
-    <a href="https://youtu.be/rCpvd1EB220" target="_blank" class="link-btn youtube-btn">
+    <a href="https://youtu.be/ms6PfbafQXk" target="_blank" class="link-btn youtube-btn">
       ▶️ 찬양페스타 소개
     </a>
     <!-- 2. 의장님 영상 -->
